@@ -1,1 +1,20 @@
-.
+body{
+    margin:100px 100px 100px 100px;
+    text-align: center;
+}
+
+.submit_box{
+    margin-left: 100px;
+}
+
+.phpStyle{
+    margin-left: 100px;
+}
+
+/* #username{
+
+} */
+
+#submission{
+    margin-top: 20px;
+}
