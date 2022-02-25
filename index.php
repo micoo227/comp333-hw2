@@ -8,6 +8,12 @@
 </head>
 
 <body>
+    <form method="GET" action="">
+        Username: <input id="username" type="text" name="username" placeholder="Enter your username" /><br>
+        <input type="submit" name="submit" value="Submit"/>
+    <p><?php
+    ?>
+    </p>
     <?php
     $servername = "localhost";
     $username = "root";
@@ -27,24 +33,18 @@
         if (!empty($s_username)) {
             $sql_query = "SELECT * FROM ratings WHERE username = ('$s_username')" ;
             $result = mysqli_query($conn, $sql_query);
-            $row = mysqli_fetch_assoc($result);
-            $out_value =  $row['song'] . " --> " . $row['ratings'];
+            while($row = mysqli_fetch_array($result)){
+                $out_value =  $row['song'] . " --> " . $row['ratings'] ."<br>";
+                echo $out_value;
+            }
+            
         }else{
-            $out_value = "No songs available"; 
+            echo $out_value = "No songs available"; 
         }
     }   
     $conn->close();
-
     ?>
 
-    <form method="GET" action="">
-        Username: <input id="username" type="text" name="username" placeholder="Enter your username" /><br>
-        <input type="submit" name="submit" value="Submit"/>
-    <p><?php 
-    if(!empty($out_value)){
-      echo $out_value;
-    }
-  ?></p>
 </body>
 
 </html>
