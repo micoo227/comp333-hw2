@@ -1,14 +1,12 @@
 body{
-    margin:100px 100px 100px 100px;
     text-align: center;
+    justify-content: center;
 }
 
-.submit_box{
-    margin-left: 100px;
-}
-
-.phpStyle{
-    margin-left: 100px;
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /* #username{
