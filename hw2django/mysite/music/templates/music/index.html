@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% load static %}
+        <link rel="stylesheet" href='{% static 'css/style.css'%}'/>
+        <title>Rating Retrieval</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <h1>Retrieve your Music Ratings!</h1>
+            </div>
+            <div class="form">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    Username: <input type="text" name="Username" value="Enter your username"/><br><br>
+                    <input type="Submit" name="Submit" value="Submit"/>
+                    </form>
+                    
+                    {% for song in queried %}
+                        <br>{{song}}
+                    {% endfor %}
+            </div>
+        </header>
+
+    </body>
+</html>
+</DOCTYPE>

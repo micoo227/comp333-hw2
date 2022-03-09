@@ -21,6 +21,6 @@ class rating(models.Model):
     rating = models.IntegerField(default=0)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.song) + " --> " + str(self.rating) 
 
 
