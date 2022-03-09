@@ -14,20 +14,27 @@ def index(request):
         'queried':queried})
 
 def registration(request):
-    try:
-        username = request.POST['username']
-        password = request.POST['password']
-        register_button = request.POST.get('register')
-    except KeyError:
+    register_button = request.POST.get('register')
+    entered_username = request.POST.get('username')
+    entered_password = request.POST.get('password')
+
+    if not entered_username or not entered_password:
         context = {
             'error_message': "Please fully complete the form.",
             'register_button': register_button,
         }
         return render(request, "music/registration.html", context)
-    else:
-        user = User()
-        user.username = username
-        user.password = password
-        user.save()
 
-        return HttpResponseRedirect(reverse('music:index'))
+    if User.objects.get(username=entered_username):
+        context = {
+        'error_message': "The username you provided is already taken. Please try again.",
+        'register_button': register_button,
+        }
+        return render(request, "music/registration.html", context)
+
+    user = User()
+    user.username = entered_username
+    user.password = entered_password
+    user.save()
+
+    return HttpResponseRedirect(reverse('music:index'))
