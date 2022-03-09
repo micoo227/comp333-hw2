@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import user, artist, rating
+from .models import User, Artist, Rating
 # Register your models here.
 
-admin.site.register(user)
-admin.site.register(artist)
-admin.site.register(rating)
+admin.site.register(User)
+admin.site.register(Artist)
+admin.site.register(Rating)
