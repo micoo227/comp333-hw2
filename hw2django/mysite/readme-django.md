@@ -60,7 +60,7 @@ Artist: Kendrick Lamar
 Birthplace: Compton, CA  
 Birthday: 1987-06-17  
 
-Artist: Bill Evnas  
+Artist: Bill Evans  
 Birthplace: Plainfield, NJ  
 Birthday: 1929-08-16  
 
