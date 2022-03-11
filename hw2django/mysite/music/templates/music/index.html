@@ -8,32 +8,46 @@
         <title>Rating Retrieval</title>
     </head>
     <body>
-        <div class="header">
-            <h1>Retrieve your Music Ratings!</h1>
+        <div class="formContent">
+            <div class="form_contain">
+                <div class="header">
+                    <br>
+                    <h1>Retrieve your Music Ratings!</h1>
+                    <br>
+                </div>
+                <div class="form">
+                    <form action="" method="GET">
+                        Username: <input type="text" name="Username" value="Enter your username" id="fill-in"/><br><br>
+                        <input type="Submit" name="Submit_Username" value="Submit" id="submit"/>
+                    </form>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="header2">
+                    <h3>Enter an artist's name to see fun facts!</h3>
+                </div>
+                <div class="form">
+                    <p>Try Bill Evans!<p>
+                    <br>
+                    <form action="" method="GET">
+                        Artist: <input type="text" name="Artist" value="Enter the artist's name" id="fill-in"/><br><br>
+                        <input type="Submit" name="Submit_Artist" value="Submit" id="submit2"/>
+                    </form>
+                </div>
+                <div class="django">
+                {% if submit_username_button == "Submit" or submit_artist_button == "Submit" %}
+                    <br> {{ message }} </br>
+                {% endif %}
+                {% for item in query %}
+                    <br>{{ item }}
+                {% endfor %}
+                </div>
+                <br>
+                <br>
+            </div>
         </div>
-        <div class="form">
-            <form action="" method="GET">
-                Username: <input type="text" name="Username" value="Enter your username"/><br><br>
-                <input type="Submit" name="Submit_Username" value="Submit"/>
-            </form>
-        </div>
-
-        <div class="header">
-            <h1>Enter an artist's name to see fun facts!</h1>
-        </div>
-        <div class="form">
-            <form action="" method="GET">
-                Artist: <input type="text" name="Artist" value="Enter the artist's name"/><br><br>
-                <input type="Submit" name="Submit_Artist" value="Submit"/>
-            </form>
-        </div>
-
-        {% if submit_username_button == "Submit" or submit_artist_button == "Submit" %}
-            <br> {{ message }} </br>
-        {% endif %}
-        {% for item in query %}
-            <br>{{ item }}
-        {% endfor %}
+        
     </body>
 </html>
 </DOCTYPE>
