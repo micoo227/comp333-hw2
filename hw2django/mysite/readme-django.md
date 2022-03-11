@@ -1,4 +1,5 @@
 # Instruction for Creating Django Data
+
 ## Website completed by Michael Renda and Rome Duong
 
 ## In the folder, we have the following descriptions:
