@@ -24,7 +24,7 @@ def index(request):
     if submit_artist_button:
         if not Artist.objects.all().filter(artist=input_artist):
             context = {
-                'message': "The artist you specified has not been rated yet. Be the first!",
+                'message': "The artist you specified has not been rated yet. Be the first! Click on Register below!",
                 'submit_artist_button': submit_artist_button,
             }
             return render(request, "music/index.html", context)
@@ -63,3 +63,4 @@ def registration(request):
     user.save()
 
     return HttpResponseRedirect(reverse('music:index'))
+
