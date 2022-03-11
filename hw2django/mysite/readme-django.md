@@ -5,6 +5,14 @@
 Project Name: mysite  
 App Name: music
 
+## In order to start and run the server (Ensure that your virtual environment is activated):
+Make sure to change your directory to be inside the hw2django/mysite where manage.py file is present.  
+Run the following command within the directory once virtual environment has been activated:  
+
+```shell
+python3 manage.py runserver
+```
+
 ## Login information for Admin Page
 
 username:john  
@@ -13,7 +21,7 @@ password:doe
 ## Step 1: Table for Users
 
 Username: Otto  
-Password: starWards2*
+Password: starWars2*
 
 Username: Amelia-Earhart  
 Password: Youaom139&yu7
