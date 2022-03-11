@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 # Instruction for Setting up PHP
 
-## Website completed by Michael Renda and Rome Duong 
-=======
 ## Website completed by Michael Renda and Rome Duong
->>>>>>> b5fdb38c28e0764e086e3b1c79137e5ed0944204
+
+=======
+
 
 ## Step 1
 
-Start the web server using XAMPP. Then, go to http://localhost:8080/phpmyadmin/ to access the interface for the web app database. Within this interface, create a new database called "music-db" by clicking on "New" on the left-hand panel.
+Start the web server using XAMPP. Then, go to <http://localhost:8080/phpmyadmin/> to access the interface for the web app database. Within this interface, create a new database called "music-db" by clicking on "New" on the left-hand panel.
 
 ## Step 2
 
