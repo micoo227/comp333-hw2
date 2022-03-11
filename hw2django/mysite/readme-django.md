@@ -13,10 +13,18 @@ Run the following command within the directory once virtual environment has been
 python3 manage.py runserver
 ```
 
-## Login information for Admin Page
+Head to this server in order to see the project deployment: <http://127.0.0.1:8000/>
 
-username:john  
-password:doe
+## Login information for Admin Page
+Open a Web browser and go to "/admin/" on your local domain such as <http://127.0.0.1:8000/admin/>.  
+When you see the login screen, use the following credentials to log in: 
+
+username: john  
+password: doe
+
+## Adding data into Django via Admin Page
+Once the models in the models.py have been migrated, you will see the Music app  
+Click on +ADD on the right side of each model in order to manually add the data and save them to the model.
 
 ## Step 1: Table for Users
 
