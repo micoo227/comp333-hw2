@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Instruction for Setting up PHP
 
 ## Website completed by Michael Renda and Rome Duong 
+=======
+## Website completed by Michael Renda and Rome Duong
+>>>>>>> b5fdb38c28e0764e086e3b1c79137e5ed0944204
 
 ## Step 1
 
