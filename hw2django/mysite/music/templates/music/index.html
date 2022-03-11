@@ -8,23 +8,32 @@
         <title>Rating Retrieval</title>
     </head>
     <body>
-        <header>
-            <div class="header">
-                <h1>Retrieve your Music Ratings!</h1>
-            </div>
-            <div class="form">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    Username: <input type="text" name="Username" value="Enter your username"/><br><br>
-                    <input type="Submit" name="Submit" value="Submit"/>
-                    </form>
-                    
-                    {% for song in queried %}
-                        <br>{{song}}
-                    {% endfor %}
-            </div>
-        </header>
+        <div class="header">
+            <h1>Retrieve your Music Ratings!</h1>
+        </div>
+        <div class="form">
+            <form action="" method="GET">
+                Username: <input type="text" name="Username" value="Enter your username"/><br><br>
+                <input type="Submit" name="Submit_Username" value="Submit"/>
+            </form>
+        </div>
 
+        <div class="header">
+            <h1>Enter an artist's name to see fun facts!</h1>
+        </div>
+        <div class="form">
+            <form action="" method="GET">
+                Artist: <input type="text" name="Artist" value="Enter the artist's name"/><br><br>
+                <input type="Submit" name="Submit_Artist" value="Submit"/>
+            </form>
+        </div>
+
+        {% if submit_username_button == "Submit" or submit_artist_button == "Submit" %}
+            <br> {{ message }} </br>
+        {% endif %}
+        {% for item in query %}
+            <br>{{ item }}
+        {% endfor %}
     </body>
 </html>
 </DOCTYPE>
